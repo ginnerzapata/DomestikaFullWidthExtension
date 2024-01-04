@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Domestika Max Width",
+  "version": "1.0",
+  "description": "Adds a button that will adjust max-width on Domestika site to fullwidth or default",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.domestika.org/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}

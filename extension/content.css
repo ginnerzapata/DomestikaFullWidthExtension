@@ -1,0 +1,13 @@
+.domestika-full-width {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+.course-trailer-footer__tool {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.video-container.video-container--with-shadow.video-player {
+  max-height: calc(100vh - 50px);
+}
