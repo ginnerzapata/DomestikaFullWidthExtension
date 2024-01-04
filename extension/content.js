@@ -13,21 +13,31 @@ function adjustMaxWidth() {
 }
 
 function createAdjustButton() {
-  var button = document.createElement("button");
+  const button = document.createElement("button");
   button.textContent = "Adjust width";
-  button.id = "adjustWidthBtn";
-  button.style.marginLeft = "24px"; // Adjust the margin as needed
+  button.className = "adjustWidthBtn";
 
   button.addEventListener("click", function () {
     adjustMaxWidth();
   });
 
-  // Assuming the video element has a common class, adjust it accordingly
-  var videoContainer = document.querySelector(".course-trailer-footer__tool");
-  if (videoContainer) {
-    videoContainer.appendChild(button);
+  const videoContainerCoursePage = document.querySelector(
+    ".course-trailer-footer__tool"
+  );
+
+  if (videoContainerCoursePage) {
+    button.style.marginLeft = "24px";
+    videoContainerCoursePage.appendChild(button);
+  }
+  const videoContainers = document.querySelectorAll(
+    ".video-player-widget-link"
+  );
+
+  if (videoContainers && videoContainers.length > 0) {
+    videoContainers.forEach((element) => {
+      element.appendChild(button);
+    });
   }
 }
 
-// Call the function to create the button when the page loads
 createAdjustButton();

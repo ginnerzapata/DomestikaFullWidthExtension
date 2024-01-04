@@ -7,7 +7,9 @@
   justify-content: flex-end;
   align-items: center;
 }
-
+button.adjustWidthBtn:hover {
+  text-decoration: underline;
+}
 .video-container.video-container--with-shadow.video-player {
   max-height: calc(100vh - 50px);
 }
