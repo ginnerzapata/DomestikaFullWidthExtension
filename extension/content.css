@@ -2,6 +2,10 @@
   max-width: 100% !important;
   margin: 0 auto !important;
 }
+.col-md-3.hide-menu {
+  display: none !important;
+}
+
 .course-trailer-footer__tool {
   display: flex;
   justify-content: flex-end;
@@ -9,7 +13,4 @@
 }
 button.adjustWidthBtn:hover {
   text-decoration: underline;
-}
-.video-container.video-container--with-shadow.video-player {
-  max-height: calc(100vh - 50px);
 }
